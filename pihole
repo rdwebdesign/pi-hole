@@ -382,7 +382,7 @@ exit 0
 tailFunc() {
   # Warn user if Pi-hole's logging is disabled
   local logging_enabled
-  logging_enabled=$(grep -c "^log-queries" /etc/dnsmasq.d/01-pihole.conf
+  logging_enabled=$(grep -c "^log-queries" /etc/dnsmasq.d/01-pihole.conf)
 
   if [[ "${logging_enabled}" == "0" ]]; then
     # No "log-queries" lines are found.
