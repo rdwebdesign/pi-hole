@@ -34,11 +34,12 @@ jobs:
       - name: Run editorconfig-checker
         run: editorconfig-checker
 
-      - name: Check python code formatting with black
-        uses: psf/black@stable
-        with:
-          src: "./test"
-          options: "--check --diff --color"
+      - name: Lint Code Base
+        uses: github/super-linter/slim@v4
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: master
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   distro-test:
     if: github.event.pull_request.draft == false
