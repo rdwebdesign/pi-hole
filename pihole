@@ -197,7 +197,7 @@ Time:
       echo -e "  ${INFO} Blocking already disabled, nothing to do"
       exit 0
     fi
-    if [[ $# > 1 ]]; then
+    if [[ $# -gt 1 ]]; then
       local error=false
       if [[ "${2}" == *"s" ]]; then
         tt=${2%"s"}
@@ -557,9 +557,6 @@ if [[ ! $EUID -eq 0 ]];then
     exit 1
   fi
 fi
-
-echo "An error is expected on the next line. No using quotes to force the error."
-echo ${CROSS}
 
 # Handle redirecting to specific functions based on arguments
 case "${1}" in
