@@ -558,6 +558,9 @@ if [[ ! $EUID -eq 0 ]];then
   fi
 fi
 
+echo "An error is expected on the next line. No using quotes to force the error."
+echo ${CROSS}
+
 # Handle redirecting to specific functions based on arguments
 case "${1}" in
   "-w" | "whitelist"            ) listFunc "$@";;
