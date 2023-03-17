@@ -35,6 +35,7 @@ jobs:
           VALIDATE_PYTHON_BLACK: true
           VALIDATE_PYTHON_FLAKE8: true
           VALIDATE_YAML: true
+          YAML_CONFIG_FILE: .yamllint.conf
           DEFAULT_BRANCH: master
           MULTI_STATUS: false
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
