@@ -38,7 +38,7 @@ jobs:
           VALIDATE_YAML: true
           YAML_CONFIG_FILE: .yamllint.conf
           DEFAULT_BRANCH: master
-          MULTI_STATUS: false
+          # MULTI_STATUS: false
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   distro-test:
